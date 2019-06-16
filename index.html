@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> UCDB </title>
+        <link rel="stylesheet">
+        <style>
+            body{
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                grid-template-rows: 1fr 370px 1fr;
+                justify-content: center;
+                background-image: url("https://i.pinimg.com/564x/81/3f/0c/813f0c0e2bee9f2ef5796f1a83ee8303.jpg");
+                background-repeat: repeat;
+                text-decoration: none;
+                width: 1250px;
+                margin: 20px 0px 0px 25px;
+            }
+            header{
+                align-items: center;
+                justify-content: center;
+                background-color: #ffde59;
+                position: relative;
+                margin: 3px;
+                padding: 18px;
+                grid-column-start: 1;
+                grid-column-end: 7;
+                text-align: center;
+                
+	            
+            }
+            aside{
+                display: grid;
+                grid-template-columns: 300px;
+                grid-template-rows: 100px 30px;
+                align-items: center;
+                justify-content: center;
+                margin: 3px;
+                grid-column-start: 1;
+                grid-column-end: 1;
+                background-color:#ff66c4;
+                text-align: center;
+                font-size: 1em;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: normal;
+
+            }
+            main{
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+                margin: 3px;
+                grid-column-start: 2;
+                grid-column-end: 6;
+                justify-items: center;
+                background-color: #5ce1e6;
+                text-align: center
+                
+            }
+            footer{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 3px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                background-color: #ffde59;
+            }
+            .botao a {  
+                font: bold 12px/24px arial, helvetica, sans-aerif;	
+                padding:0px;
+                text-decoration: none;
+                text-align:center;	
+                color:#4a003a;
+                justify-items: center;
+                background-color: #ff66c4;
+                width:120px;  
+                height:24px;	
+                display:block;
+                margin-left: 40%;
+                margin-top: 3px;	
+	        }
+            main p{
+                margin-top: 38px;
+            }
+            #logoUFCG{
+                max-width:200px;
+                max-height:150px;
+                width: auto;
+                height: auto;
+                margin-top: 50px;
+                margin-left: 5px;
+            }
+            #logoCC{
+                max-width:120px;
+                max-height:70px;
+                width: auto;
+                height: auto;
+                margin-top: 80px;
+                margin-left: 10px;
+            }
+            #img{
+                display: grid;
+                grid-template-columns: 10px;
+                grid-template-rows: 50px 50px;
+            }
+            #linksRodape{
+                text-decoration: none;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                font-size: 20px;
+                
+                
+            }
+            #sobre{
+                text-decoration: none;
+                grid-column-start: 3;
+                grid-column-end: 4;
+                font-size: 20px;
+            }
+            .decoracaoLinks{
+                text-decoration:none;
+                color: #4a003a;
+            }
+            h1{
+                margin-top: 75px;
+                color:#4a003a;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Bem vindo ao UCDB:classificações e reviews de cursos da UFCG</h1>
+        </header>
+        <aside> 
+
+            <h3 style="margin-top: 180px">O que é o UCDB?</h3>
+            <p style="margin-top: 200px"> Aqui você pode avalias as cadeiras do seu<br> curso ou ver as avalições que seus 
+                colegas fizeram,<br> além de poder trocar ideias com os outros alunos!!
+            </p>
+        </aside>
+        <main>
+            <p class="botao" style="margin-top: 170px">
+                <a href="login.html" title="Login" target="_blank">login</a>
+                <a href="cadastrar.html" title="Cadastrar" target="_blank">cadastrar</a>
+            </p>
+        </main>
+        
+        <footer>
+                <div id="img">
+                        <img id="logoUFCG" src="http://labarc.ufcg.edu.br/loac/uploads/OAC/ufcg_logomarca3.svg">
+                        <img id="logoCC" src="https://www.lcc.ufcg.edu.br/status/images/logo.png">
+                    </div>
+                    <div id="linksRodape">
+                        <h4>Links</h4>
+                        <p><a class="decoracaoLinks" href="index.html" title="Inicio" target="_blank"> Inicio </a></p>
+                        <p><a class="decoracaoLinks"href="cadastrar.html" title="Cadastrar" target="_blank"> Cadastrar</a></p> 
+                        <p><a class="decoracaoLinks"href="login.html" title="Login" target="_blank"> Login</a></p>
+                        <p><a href="privacidade.html" class="decoracaoLinks" title="Provacidade" target="_blank"> Política de Privacidade</a></p> 
+                    </div>
+                    <div id="sobre">
+                        <h4>Desenvolvedores</h4>
+                        <p><a class="decoracaoLinks" href="https://twitter.com/_allebarros" title="Ale" target="_blank"> Alessandra Barros </a></p>
+                        <p><a class="decoracaoLinks" href="https://www.instagram.com/cleciana.santanaa/" title="Cle" target="_blank"> Cleciana Santana </a></p>
+        
+                    </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Cadastrar </title>
+        <link rel="stylesheet">
+        <style>
+            body{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-template-rows: 1fr 370px 1fr;
+                justify-content: center;
+                background-image: url("https://i.pinimg.com/564x/81/3f/0c/813f0c0e2bee9f2ef5796f1a83ee8303.jpg");
+                background-repeat: repeat;
+                text-decoration: none;
+                width: 1250px;
+                margin: 20px 0px 0px 25px;
+            }
+            header{
+                
+                display: grid;
+                grid-template-columns: 500px;
+                grid-template-rows: 100px auto;
+                font-size: 15px;
+                font-style: italic;
+                font-family: monospace;
+                justify-content: center;
+                justify-items:auto;
+                background-color: #ffde59;
+                margin: 3px;
+                padding: 10px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                text-align: center;
+            }
+            main{
+                margin: 3px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                justify-items: center;
+                background-color: #5ce1e6;
+                text-align: center
+                
+            }
+            footer{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 3px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                background-color: #ffde59;
+            }
+            .botao a {  
+                font: bold 12px/24px arial, helvetica, sans-aerif;	
+                padding:0px;
+                text-decoration: none;
+                text-align:center;	
+                color:#4a003a;
+                justify-items: center;
+                background-color: #ff66c4;
+                width:120px;  
+                height:24px;	
+                display:block;
+                margin-top: 3px;	
+	        }
+            .entradas{
+                display: grid;
+                grid-template-columns: 500px;
+                grid-template-rows: 30px 30px 30px 30px 30px;
+                justify-content: center;
+                margin-top: 18px;
+            }
+            .caixaEntrada{
+                padding: 10px;
+                margin: 60px 250px 15px 250px;
+                background-color: white;
+                justify-content: center;
+            }
+            .inputs{
+                margin: 2px;
+                margin-top: 5px; 
+                background-color: bisque;
+            }
+            #links{
+                display: flex;
+                justify-content: center;
+                margin: 15px;
+            }
+            #logoUFCG{
+                max-width:200px;
+                max-height:150px;
+                width: auto;
+                height: auto;
+                margin-top: 50px;
+                margin-left: 5px;
+            }
+            #logoCC{
+                max-width:120px;
+                max-height:70px;
+                width: auto;
+                height: auto;
+                margin-top: 80px;
+                margin-left: 10px;
+            }
+            #img{
+                display: grid;
+                grid-template-columns: 10px;
+                grid-template-rows: 50px 50px;
+            }
+            #linksRodape{
+                grid-column-start: 2;
+                grid-column-end: 3;
+                font-size: 20px;
+                
+                
+            }
+            #sobre{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                font-size: 20px;
+            }
+            .decoracaoLinks{
+                text-decoration:none;
+                color: #4a003a;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center; color:#4a003a">UCDB:classificações e reviews de cursos da UFCG</h2>
+            <di id="links">
+                <h3 style="margin: 10px"> 
+                    <p class="botao"><a href="index.html" title="Inicio" target="_blank"> Inicio </a></p>
+                </h3>
+                <h3 style="margin: 10px"> 
+                    <p class="botao"><a href="login.html" title="Cadastrar" target="_blank"> Cadastrar</a></p> 
+                </3>
+                </di>
+        </header>
+        <main>
+            <div class="caixaEntrada">
+                <div class="entradas">
+                    <input id="txtNome"  class="inputs" type="text" name="nome" placeholder="Nome" autofocus="autofocus"  />
+                    <input id="txtSobrenome"  class="inputs" type="text" name="sobrenome" placeholder="Sobrenome" autofocus="autofocus"  />
+                    <input id="txtEmail"  class="inputs" type="text" name="email" placeholder="Email" autofocus="autofocus"  />
+                    <input id="txtSenha"  class="inputs" type="text" name="senha" placeholder="Senha" autofocus="autofocus"  />
+                    <input id="txtConfirmarSenha"  class="inputs" type="text" name="Confirmar Senha" placeholder="Confirmar Senha" autofocus="autofocus"  />
+                </div>
+                <p class="botao" style="margin-left:40% "> <a href="index.html" title="Inicio" target="_blank">login</a> </p>
+                
+            </div>
+        </main>
+        <footer>
+                <div id="img">
+                        <img id="logoUFCG" src="http://labarc.ufcg.edu.br/loac/uploads/OAC/ufcg_logomarca3.svg">
+                        <img id="logoCC" src="https://www.lcc.ufcg.edu.br/status/images/logo.png">
+                    </div>
+                    <div id="linksRodape">
+                        <h4>Links</h4>
+                        <p><a class="decoracaoLinks" href="index.html" title="Inicio" target="_blank"> Inicio </a></p>
+                        <p><a class="decoracaoLinks"href="cadastrar.html" title="Cadastrar" target="_blank"> Cadastrar</a></p> 
+                        <p><a class="decoracaoLinks"href="login.html" title="Login" target="_blank"> Login</a></p>
+                        <p><a href="privacidade.html" class="decoracaoLinks" title="Provacidade" target="_blank"> Política de Privacidade</a></p> 
+                    </div>
+                    <div id="sobre">
+                        <h4>Desenvolvedores</h4>
+                        <p><a class="decoracaoLinks" href="https://twitter.com/_allebarros" title="Ale" target="_blank"> Alessandra Barros </a></p>
+                        <p><a class="decoracaoLinks" href="https://www.instagram.com/cleciana.santanaa/" title="Cle" target="_blank"> Cleciana Santana </a></p>
+        
+                    </div>
+        </footer>
+
+    </body>
+</html>
