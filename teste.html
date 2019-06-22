@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> teste </title>
+        <link rel="stylesheet">
+        <style>
+            *{
+                margin:0;
+                padding: 0;
+            }
+            body{
+                background-color:aliceblue;
+            }
+            #pesquisa{
+                width: 400px;
+                height: 40px;
+                margin: 200px auto;
+            }
+            #texto{
+                width: 350;
+                height: 40px;
+                float: left;
+                font-family: 'Arial';
+                font-size: 20px;
+            }
+            .bnt{
+                width: 20px;
+                height: 20px;
+                background-color: aquamarine;
+                padding: 10px 13px;
+                cursor: pointer;
+
+                
+            }
+            #texto:focus{
+                border: solid 2px salmon;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="text">Testando Um Componente</h1>
+        <form id="pesquisa">
+            <input type="text" id="texto" placeholder="Buscar..."/>
+            <img class="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
+            <select id="historico" onchange=changeFunc(value)></select>
+        </form>
+    </body>
+    <script src="app.js"></script>
+    
+</html>

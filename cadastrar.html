@@ -34,6 +34,11 @@
                 grid-column-end: 5;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                display: grid;
+                grid-template-areas: "h3"
+                                     "div form";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
                 text-align: center;
             }
             main{
@@ -86,8 +91,8 @@
             }
             #links{
                 display: flex;
-                justify-content: center;
-                margin: 15px;
+                justify-content:baseline;
+                margin: 5px;
             }
             #logoUFCG{
                 max-width: 180px;
@@ -126,19 +131,61 @@
                 text-decoration:none;
                 color: #4a003a;
             }
+            #pesquisa{
+                display: grid;
+                grid-template-areas: "pesquisa bnt"
+                                     "historico";
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 2fr 1fr;
+                justify-items: end;
+                width: 100px;
+                height: 40px;
+                margin: 30px auto;
+            }
+            #texto{
+                width: 250;
+                height: 20px;
+                float: left;
+                font-family: 'Arial';
+                font-size: 20px;
+            }
+            .bnt{
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background-color: aquamarine;
+                padding: 10px;
+                margin-left: 10px;
+                cursor: pointer;
+
+                
+            }
+            #texto:focus{
+                border: solid 2px aquamarine;
+            }
+            #historico{
+                display: inline;
+                width: 273px;
+                height: 20px;
+            }
         </style>
     </head>
     <body>
         <header>
             <h2 style="text-align: center; color:#4a003a">UCDB:classificações e reviews de cursos da UFCG</h2>
-            <di id="links">
+            <div id="links">
                 <h3 style="margin: 10px"> 
                     <p class="botao"><a href="index.html" title="Inicio" target="_blank"> Inicio </a></p>
                 </h3>
                 <h3 style="margin: 10px"> 
                     <p class="botao"><a href="login.html" title="Cadastrar" target="_blank"> Cadastrar</a></p> 
-                </3>
-                </di>
+                </h3>
+                <form id="pesquisa">
+                    <input type="text" id="texto" placeholder="Buscar..."/>
+                    <img class="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
+                    <select id="historico" onchange=changeFunc(value)></select>
+                </form>
+            </div>
         </header>
         <main>
             <div class="caixaEntrada">
@@ -172,6 +219,6 @@
         
                     </div>
         </footer>
-
+        <script src="app.js"></script>
     </body>
 </html>
