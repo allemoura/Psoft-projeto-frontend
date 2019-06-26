@@ -4,7 +4,13 @@ const input = document.getElementById("texto");
 
 
 function consultaDisciplinas(){
-    return fetch('http://localhost:8000/disciplinas.json');
+    return fetch('https://ucdb-api.herokuapp.com/api/v1/disciplinas/all', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
 }
 
 function getDisciplinas(){ consultaDisciplinas().then(result =>{

@@ -14,7 +14,6 @@ function validacaoEmail() {
         (dominio.indexOf(".") >=1)&& 
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
         document.getElementById("msgemail").innerHTML="E-mail válido";
-        alert("E-mail valido");
     }
     else{
         document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
@@ -34,7 +33,6 @@ function validaSenha(){
         alert("Senha Invalida!!\nEla Precisar Ter Mais de 6 caracteres");
     }else{
         document.getElementById("msgemail").innerHTML="Senha válida";
-        alert("Senha valida");
     }
         
 

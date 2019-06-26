@@ -183,17 +183,17 @@
                 <form id="pesquisa">
                     <input type="text" id="texto" placeholder="Buscar..."/>
                     <img class="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
-                    <select id="historico" onchange=changeFunc(value)></select>
+                    <select id="historico"></select>
                 </form>
             </div>
         </header>
         <main>
             <div class="caixaEntrada">
                 <div class="entradas">
-                    <input id="txtEmail"  class="inputs" type="email" name="username" placeholder="Usuário" autofocus="autofocus"  />
+                    <input id="txtUsuario"  class="inputs" type="email" name="username" placeholder="Usuário" autofocus="autofocus"  />
                     <input id="txtSenha" class="inputs" type="password" name="senha" placeholder="Senha" autofocus="autofocus"  />
                 </div>
-                <p class="botao" style="margin-left: 40%"> <a href="index.html" title="Inicio" target="_blank">login</a> </p>
+                <p class="botao" style="margin-left: 40%" onclick="fazLogin()"> <a href="index.html" title="Inicio" target="_blank">login</a> </p>
             </div>
         </main>
         <footer>
@@ -216,5 +216,6 @@
                     </div>
         </footer>
         <script src="app.js"></script>
+        <script src="login.js"></script>
     </body>
 </html>
