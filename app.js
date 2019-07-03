@@ -1,16 +1,8 @@
 let lista = document.getElementById("historico")
 const input = document.getElementById("texto");
 
-
-
 function consultaDisciplinas(){
-    return fetch('https://ucdb-api.herokuapp.com/api/v1/disciplinas/all', {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  });
+    return fetch('http://localhost:8000/disciplinas.json');
 }
 
 function getDisciplinas(){ consultaDisciplinas().then(result =>{
@@ -44,14 +36,20 @@ function retornaDisciplinas(arr){
   var n = arr.length;
   while(i < n){
       opt = document.createElement('option');
-      opt.value = 'http://localhost:8000/index.html';
+      opt.value = arr[i];
       opt.text=arr[i];
       lista.appendChild(opt);
       i++;
   }
 }
 function changeFunc($i) {
-    window.open($i, '_blank');
+  if(localStorage > 1){
+    localStorage.setItem(idDisciplina, $i.split("-")[0]);
+    localStorage.setItem(disciplina, $i.split("-")[1]);
+    window.open('localhost:8082/disciplina.html', '_blank')
+  }else{
+    alert("VOCÊ TEM QUE ESTA LOGADO PARA TER ACESSO!!")
+  }
 }
   function limpaLista(){
     var tmp = lista.children; 
