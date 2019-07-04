@@ -11,7 +11,7 @@ function cadastraUsuaarioo(){
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({name: "ale", lastName: "barros", email:"alessandra@gmail.com",password:"12345678"})
+    body: JSON.stringify({name: name, lastName: lastName, email:email,password:password})
   });
 }
 
@@ -22,5 +22,7 @@ function cadastra(){
   console.log(data)
   if(data.message == 'User already registered.'){
     alert('E-mail já esta cadastrado!!!')
+  }else{
+    window.open('login.html', '_self')
   }
 })}

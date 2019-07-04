@@ -1,8 +1,15 @@
 let lista = document.getElementById("historico")
 const input = document.getElementById("texto");
 
+
 function consultaDisciplinas(){
-    return fetch('http://localhost:8000/disciplinas.json');
+    return fetch(`https://pjsw.herokuapp.com/api/v1/disciplinas/` + input,{
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
 }
 
 function getDisciplinas(){ consultaDisciplinas().then(result =>{
@@ -10,22 +17,11 @@ function getDisciplinas(){ consultaDisciplinas().then(result =>{
 }).then(data =>{
     let disciplinas = [];
     disciplinas = disciplinas.concat(data.map(r => `${r.ID} - ${r.nome}`))
-    geraOpcoes(disciplinas);
+    retornaDisciplinas(disciplinas);
 }).catch(err =>{
     console.log("ERRO: ",err);
 })};
 
-function geraOpcoes(data){
-    var str = input.value
-    str = str.toUpperCase()
-    var subDisciplinas = data.filter(data => findSubString(data,str));
-    retornaDisciplinas(subDisciplinas);
-}
-
-function findSubString(string, substring){
-    let tmp = string.indexOf(substring);
-    return tmp > -1;
-}
 
 function retornaDisciplinas(arr){
   let opt;
@@ -46,7 +42,7 @@ function changeFunc($i) {
   if(localStorage > 1){
     localStorage.setItem(idDisciplina, $i.split("-")[0]);
     localStorage.setItem(disciplina, $i.split("-")[1]);
-    window.open('localhost:8082/disciplina.html', '_blank')
+    window.open('disciplina.html', '_self')
   }else{
     alert("VOCÊ TEM QUE ESTA LOGADO PARA TER ACESSO!!")
   }

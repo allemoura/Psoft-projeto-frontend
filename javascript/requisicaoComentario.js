@@ -1,8 +1,15 @@
 const comentarios = [];
+const idDisciplina = localStorage.getItem(idDisciplina);
 
 async function getComentario(){
-  
-  let response = await fetch('http://localhost:8000/user.json')
+  let dis = getDisciplina();  
+  let response = await fetch('https://pjsw.herokuapp.com/api/v1/comentarios/',{
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },body: JSON.stringify({id:idDisciplina})
+  })
   let data = await response.json()
   let tmp = await carregaComentario(data);
   comentarios.push(...tmp);

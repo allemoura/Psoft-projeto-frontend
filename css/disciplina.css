@@ -10,6 +10,21 @@ main{
     text-align: center
     
 }
+aside{
+    grid-area: aside;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    background-color:#ff66c4;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+}
 main p{
     margin-top: 38px;
 }
@@ -35,9 +50,16 @@ main p{
     background-color: antiquewhite;
 }
 #curtida{
+    display: grid;
     grid-template-areas:
-            "like texto";
+                "like textoCurti";
+    margin-left: 45%;
+    margin-right: 45%;
      
+}
+#textoCurti{
+    grid-area: textoCurti;
+    margin: 10px;
 }
 #texto{
     grid-area: texto;
@@ -49,6 +71,7 @@ main p{
 #HCB_comment_box{
     padding-bottom: 1em; 
     margin-left: 20%;
+    margin-right: 20%;
 }
 #comentario{
     background-attachment: initial; 
@@ -68,6 +91,7 @@ main p{
     max-width: 30px; 
     min-height: 30px; 
     cursor: pointer;
+    margin: 10px;
 }
 #rankingLike{
     display: grid;
@@ -81,20 +105,18 @@ main p{
     border-radius: 6px;
 }
 header{
-    align-items: center;
-    justify-content: center;
-    background-color: #ffde59;
-    position: relative;
-    margin: 3px;
-    padding: 18px;
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
-    display: grid;
-    grid-template-areas: "h3"
-                         "div form";
+    grid-template-areas: "h3" 
+                          "form";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: #ffde59;
+    position: relative;
+    margin: 3px;
+    padding: 18px;
     text-align: center;
 }

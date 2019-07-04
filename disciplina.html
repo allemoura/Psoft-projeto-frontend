@@ -12,26 +12,16 @@
     </head>
     <body>
         <header>
-            <h2 style="text-align: center; color:#4a003a">UCDB:classificações e reviews de cursos da UFCG</h2>
-            <div id="links">
-                <h3 style="margin: 10px"> 
-                    <p class="botao"><a href="index.html" title="Inicio" target="_blank"> Inicio </a></p>
-                </h3>
-                <h3 style="margin: 10px"> 
-                    <p class="botao"><a href="login.html" title="Cadastrar" target="_blank"> Cadastrar</a></p> 
-                </h3>
-                <form id="pesquisa">
-                    <input type="text" id="texto" placeholder="Buscar..."/>
-                    <img id="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
-                    <select id="historico" onchange=changeFunc(value)></select>
-                </form>
-            </div>
+            <h1> UCDB:classificações e reviews de cursos da UFCG</h1>
+            <form id="pesquisa">
+                <input type="text" id="texto" placeholder="Buscar..."/>
+                <img class="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
+                <select id="historico" onchange=changeFunc(value)></select>
+            </form>
         </header>
         <aside>
             <div id="lateral">
-                <h3 >O que é o UCDB?</h3>
-                <p> Aqui você pode avalias as cadeiras do seu<br> curso ou ver as avalições que seus 
-                    colegas fizeram,<br> além de poder trocar ideias com os outros alunos!!
+                <p>Aqui você pode conferir algumas classificações das nossas disciplinas!!
                 </p>
             </div>
             <h4>Mais Curtidas</h4>
@@ -43,20 +33,24 @@
             <h1 id="disciplina"></h1>
             <div id="curtida">
                 <img title="teste" id="like" onclick="darLike()" src="http://pngimg.com/uploads/like/like_PNG39.png ">
+                <div id="likes"> 
+                    <h5 id="textoCurti">curtir</h5>
+                    <h5 id="qtdLike"></h5>
+                </div>
+                
             </div>
             
             <div id="HCB_comment_box">
                     <div id="comentarios"></div>    
-                <div>
+                    
                     <div class="hcb-wrapper" style="clear: both; margin-bottom: 0.5em; padding-bottom: 0px; padding-left: 0px; padding-right: 5px; padding-top: 0px;">
                         <div class="hcb-shadow-m">
                             <textarea placeholder="DEIXE UM COMENTARIO..." id="comentario" name="content" rows="4" ></textarea>
                         </div>
                     </div>
-                    <div>
-                                        
-                        <p class="botao" style="margin-left: 33%; margin-top: 3px;" onclick="addComentario()">Comentar </p>
-                        </div>
+                    <div>                     
+                        <p class="botao" style="margin-left: 33%; margin-right:33%;margin-top: 3px;" onclick="addComentario()">Comentar </p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -82,11 +76,11 @@
         </footer>
         <script src="./javascript/addComentario.js"></script>
         <script type="module" src="./javascript/renderizaComentarios.js"></script>
-        <script src="like.js"></script>
-        <script src="exclui.js"></script>
-        <script src="inicio.js"></script>
+        <script src="./javascript/like.js"></script>
+        <script src="./javascript/exclui.js"></script>
+        <script src="./javascript/inicio.js"></script>
         <script src="./javascript/buscaDisciplina.js"></script>
-        <script src="ranking.js"></script>
+        <script src="./javascript/ranking.js"></script>
         
         
     </body>

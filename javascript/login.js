@@ -1,8 +1,8 @@
 const usuario = document.getElementById('txtUsuario').value;
 const senha = document.getElementById('txtSenha').value;
 
-function login(){
-    return fetch('https://ucdb-api.herokuapp.com/api/v1/auth/login', {
+function fazLogin(){
+    return fetch('https://pjsw.herokuapp.com/api/v1/user', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -12,7 +12,7 @@ function login(){
   });
 }
 
-function fazLogin(){
+function login(){
     login().then(result => {
         return result.json()
     }).then(data => {
@@ -21,26 +21,8 @@ function fazLogin(){
             alert('Usario ou senha incorretos!!');
         }else{
             localStorage.setItem('token', data.token)
+            window.open('home.html', '_self')
         }
     })
 }
 
-function requisicao(){
-    return fetch(`https://ucdb-api.herokuapp.com/api/v1/user/${usuario}`, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }});
-}
-function verifica(){
-    requisicao().then(result =>{
-        return result.json()
-    }).then(data =>{
-        console.log(data)
-    })
-}
-
-function getToken(){
-    return localStorage.getItem('token');
-}
