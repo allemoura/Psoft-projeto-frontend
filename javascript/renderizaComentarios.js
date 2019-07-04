@@ -1,5 +1,5 @@
-import {getComentario, comentarios} from './comentario.js';
-import './mural.js';
+import {getComentario, comentarios} from './javascript/renderizaComentario.js';
+import './javascript/mural.js';
 
 function render() {
     let $comen = document.getElementById("comentarios");

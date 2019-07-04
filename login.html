@@ -3,172 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title> Login </title>
-        <link rel="stylesheet">
-        <style>
-            html {
-                display: grid;
-                align-items: center;
-                justify-items: center;
-            }
-            body{
-                background-image: url("https://i.pinimg.com/564x/81/3f/0c/813f0c0e2bee9f2ef5796f1a83ee8303.jpg");
-                background-repeat: repeat;
-                text-decoration: none;
-                display: grid;
-                grid-template-areas: "header header header" 
-                                     "aside main main" 
-                                     "footer footer footer";
-                grid-template-columns: 1fr 2fr 1fr;
-                grid-template-rows: 1fr auto 1fr;
-                font-family: sans-serif;
-                font-size: 16px;
-            }
-            header{
-                align-items: center;
-                justify-content: center;
-                background-color: #ffde59;
-                position: relative;
-                margin: 3px;
-                padding: 18px;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                grid-row-start: 1;
-                grid-row-end: 2;
-                display: grid;
-                grid-template-areas: "h3"
-                                     "div form";
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr;
-                text-align: center;
-            }
-            main{
-                margin: 3px;
-                grid-column-start: 1;
-                grid-column-end: 4;
-                justify-items: center;
-                background-color: #5ce1e6;
-                text-align: center
-                
-            }
-            footer{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                margin: 3px;
-                grid-column-start: 1;
-                grid-column-end: 4;
-                background-color: #ffde59;
-            }
-            .botao a {  
-                font: bold 12px/24px arial, helvetica, sans-aerif;	
-                padding:0px;
-                text-decoration: none;
-                text-align:center;	
-                color:#4a003a;
-                justify-items: center;
-                background-color: #ff66c4;
-                width:120px;  
-                height:24px;	
-                display:block;
-                margin-top: 3px;	
-	        }
-            .entradas{
-                display: grid;
-                grid-template-columns: 500px;
-                grid-template-rows: 30px 30px 30px 30px 30px;
-                justify-content: center;
-                margin-top: 18px;
-            }
-            .caixaEntrada{
-                padding: 10px;
-                margin: 60px 250px 15px 250px;
-                background-color: white;
-                justify-content: center;
-            }
-            .inputs{
-                margin: 2px;
-                margin-top: 5px; 
-                background-color: bisque;
-            }
-            #links{
-                display: flex;
-                justify-content:baseline;
-                margin: 5px;
-            }
-            #logoUFCG{
-                max-width: 180px;
-                max-height: 130px;
-                width: auto;
-                height: auto;
-                margin-top: 20px;
-                margin-left: 0px;
-            }
-            #logoCC{
-                max-width: 100px;
-                max-height: 50px;
-                width: auto;
-                height: auto;
-                margin-top: 50px;
-                margin-left: 10px;
-            }
-            #img{
-                display: grid;
-                grid-template-columns: 10px;
-                grid-template-rows: 50px 50px;
-            }
-            #linksRodape{
-                text-decoration: none;
-                grid-column-start: 2;
-                grid-column-end: 3;
-                font-size: 10px;
-            }
-            #sobre{
-                text-decoration: none;
-                grid-column-start: 3;
-                grid-column-end: 4;
-                font-size: 10px;
-            }
-            .decoracaoLinks{
-                text-decoration:none;
-                color: #4a003a;
-            }
-            #pesquisa{
-                display: grid;
-                grid-template-areas: "pesquisa bnt"
-                                     "historico";
-                grid-template-columns: 1fr 1fr;
-                grid-auto-rows: 2fr 1fr;
-                justify-items: end;
-                width: 100px;
-                height: 40px;
-                margin: 30px auto;
-            }
-            #texto{
-                width: 250;
-                height: 20px;
-                float: left;
-                font-family: 'Arial';
-                font-size: 20px;
-            }
-            .bnt{
-                width: 10px;
-                height: 10px;
-                border-radius: 10px;
-                background-color: aquamarine;
-                padding: 10px;
-                margin-left: 10px;
-                cursor: pointer;
+        <link rel="stylesheet" href="./css/busca.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/html.css">
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/util.css">
 
-                
-            }
-            #texto:focus{
-                border: solid 2px aquamarine;
-            }
-            #historico{
-                display: inline;
-                width: 273px;
-                height: 20px;
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -182,14 +22,14 @@
                 </h3>
                 <form id="pesquisa">
                     <input type="text" id="texto" placeholder="Buscar..."/>
-                    <img class="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
+                    <img id="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
                     <select id="historico"></select>
                 </form>
             </div>
         </header>
         <main>
-            <div class="caixaEntrada">
-                <div class="entradas">
+            <div id="caixaEntrada">
+                <div id="entradas">
                     <input id="txtUsuario"  class="inputs" type="email" name="username" placeholder="Usuário" autofocus="autofocus"  />
                     <input id="txtSenha" class="inputs" type="password" name="senha" placeholder="Senha" autofocus="autofocus"  />
                 </div>
@@ -197,10 +37,10 @@
             </div>
         </main>
         <footer>
-                <div id="img">
-                        <img id="logoUFCG" src="http://labarc.ufcg.edu.br/loac/uploads/OAC/ufcg_logomarca3.svg">
-                        <img id="logoCC" src="https://www.lcc.ufcg.edu.br/status/images/logo.png">
-                    </div>
+            <div id="img">
+                <img id="logoUFCG" src="http://labarc.ufcg.edu.br/loac/uploads/OAC/ufcg_logomarca3.svg">
+                <img id="logoCC" src="https://www.lcc.ufcg.edu.br/status/images/logo.png">
+                </div>
                     <div id="linksRodape">
                         <h4>Links</h4>
                         <p><a class="decoracaoLinks" href="index.html" title="Inicio" target="_blank"> Inicio </a></p>
@@ -212,10 +52,10 @@
                         <h4>Desenvolvedores</h4>
                         <p><a class="decoracaoLinks" href="https://twitter.com/_allebarros" title="Ale" target="_blank"> Alessandra Barros </a></p>
                         <p><a class="decoracaoLinks" href="https://www.instagram.com/cleciana.santanaa/" title="Cle" target="_blank"> Cleciana Santana </a></p>
-        
                     </div>
+                </div>
         </footer>
-        <script src="app.js"></script>
-        <script src="login.js"></script>
+        <script src="./javascript/buscaDisciplina.js"></script>
+        <script src="./javascript/login.js"></script>
     </body>
 </html>

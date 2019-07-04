@@ -14,7 +14,7 @@ class MuralComentario extends HTMLElement{
 
     render() {
         this.$shadow.innerHTML = 
-            `<link rel="stylesheet" href="comentario.css">
+            `<link rel="stylesheet" href=";/css/comentario.css">
             <div>
                 <div class="dados">
                     <h4 class="usuario" >${this.usuario}</h4>
