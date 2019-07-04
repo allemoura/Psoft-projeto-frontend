@@ -1,12 +1,13 @@
 # Frontend Projeto de Software  
 ## dupla: Alessandra Barros e Cleciana Santana
-### Requisitos não funcionais específicos para o frontend  
-Você deve empacotar todo o código em módulos ES6  
-Você deve usar a API Fetch para requisições ao backend  
-Você deve usar um dos padrões: MVC, MVVM, CBA ou híbrido (MVC+ CBA)  
-Você pode usar frameworks de frontend, mas exclusivamente para:  
-usar os componentes/widgets providos pelo framework  
-usar o sistema de roteamento  
-sincronizar estado entre modelos e view  
-Você não pode usar frameworks para criar seus próprios componentes/widgets  
-Você pode usar a API de Custom Components para criar componentes  
+### Diretorios e arquivos
+Os diretorios estao divididos em:   
+    css - contém todos os arquivos css divididos em relação as necessidades e relações das páginas html;  
+    javascript - contém todos os arquivos js divididos por suas ações expecificas, como fazer a buscas das disciplinas por um nome digitado;  
+    diretorio central - contém os arquivos html, separado por páginas: index, disciplina, cadastrar e login.
+
+### Bibliotecas e frameworks
+Para estilização das páginas foi usado apenas css;   
+Para ação, organização, execução de requisições necessarias para o funcionamento do frontend foi utilizado apenas javascript;
+Apenas components proprios foram utilizados, construido por meio do css, html e javascript;
+Nenhum tipo de biblioteca ou frameworks foi utilizado para está aplicação.    
