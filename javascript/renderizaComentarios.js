@@ -1,4 +1,4 @@
-import {getComentario, comentarios} from './javascript/renderizaComentario.js';
+import {getComentario, comentarios} from './javascript/requisicaoComentario.js';
 import './javascript/mural.js';
 
 function render() {
