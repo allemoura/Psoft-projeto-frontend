@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title> Login </title>
-        <link rel="stylesheet" href="./css/busca.css">
+        <link rel="stylesheet" href="./css/busca_v1.css">
         <link rel="stylesheet" href="./css/footer.css">
         <link rel="stylesheet" href="./css/html.css">
         <link rel="stylesheet" href="./css/login.css">
@@ -14,10 +14,10 @@
         <header>
             <h2 style="text-align: center; color:#4a003a">UCDB:classificações e reviews de cursos da UFCG</h2>
             <div id="links">
-                <h3 style="margin: 10px"> 
+                <h3 style="margin: 10px;margin-top:35px"> 
                     <p class="botao"><a href="index.html" title="Inicio" target="_self"> Inicio </a></p>
                 </h3>
-                <h3 style="margin: 10px"> 
+                <h3 style="margin: 10px;margin-top:35px"> 
                     <p class="botao"><a href="cadastrar.html"  title="Cadastrar" target="_self"> Cadastrar</a></p> 
                 </h3>
                 <form id="pesquisa">
@@ -33,7 +33,7 @@
                     <input id="txtUsuario"  class="inputs" type="email" name="username" placeholder="Usuário" autofocus="autofocus"  />
                     <input id="txtSenha" class="inputs" type="password" name="senha" placeholder="Senha" autofocus="autofocus"  />
                 </div>
-                <button class="botao" style="margin-left: 40%" onclick="fazLogin()"> Login</button>
+                <button class="botao" type="button" style="margin-left: 40%" onclick="login()"> Login</button>
             </div>
         </main>
         <footer>
@@ -56,6 +56,6 @@
                 </div>
         </footer>
         <script src="./javascript/buscaDisciplina.js"></script>
-        <script src="./javascript/login.js"></script>
+        <script src="./javascript/login_v2.js"></script>
     </body>
 </html>

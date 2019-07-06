@@ -1,6 +1,7 @@
-const token = localStorage.getItem(token)
+
 function rankingLike(){
-    return fetch('https://pjsw.herokuapp.com/v1/disciplinas/1',{
+    var token = localStorage.getItem('token')
+    return fetch('https://pjsw.herokuapp.com/api/v1/disciplinas/rank',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
@@ -13,16 +14,23 @@ function rankingLike(){
 function carregaRanking(){
     rankingLike().then(resul=>{return resul.json()}).then(data=>{
         let disc = [];
-        console.log(data);
         if(data.message == "Voce nao tem permissao. Por favor, faca login."){
             alert('algo deu errado, tente novamente...')
         }else{
-            disc = disc.concat(data.map(r => `${r.nome} - ${r.like}`));
+            var tmp = topDez(data);
+            disc = disc.concat(tmp.map(r => `${r.description} - ${r.qtdLikes}`));
             listar(disc);
         }
     })
 }
 
+function topDez(arr){
+    let topDez = []
+    for(i =0;i<10;i++){
+        topDez[i] = arr[i];
+    }
+    return topDez;
+}
 function listar(arr){
     let node = document.getElementById("rankingLike");
     

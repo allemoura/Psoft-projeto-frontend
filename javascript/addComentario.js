@@ -1,24 +1,25 @@
-const comentario = document.getElementById('comentario').value;
-const token = localStorage.getItem(token);
-const idDisciplina = getDisciplina(idDisciplina);
+const comentario = document.getElementById('comentario');
 
 function enviaComentario(){
-    return fetch('https://pjsw.herokuapp.com/api/v1/comentarios"', {
+    let idDisciplina = localStorage.getItem('idDisciplina');
+    var token = localStorage.getItem('token');
+    return fetch('https://pjsw.herokuapp.com/api/v1/comentarios/' + idDisciplina, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      "Authorization":token
-    },
-    body:JSON.stringify({id:idDisciplina,comentario:comentario})
+      'Authorization':token
+    },body: JSON.stringify({content:comentario.value})
 })};
 
 function addComentario(){
-    enviaComentario().then(result =>{return result.json}).then(data =>{
-    if(data.message == "Você não tem permissão. Por favor, faça login." ||data.message=="Ops, algo deu errado."){
-        alert("Ops, algo deu errado, tente nocamente")
-    }else{
-        alert("atualize a pagina!!")
-    }
+    console.log('oii')
+    enviaComentario().then(result =>{return result.json()}).then(data =>{
+        
+        if(data.message == "Voce nao tem permissao. Por favor, faca login." ||data.message=="Ops, algo deu errado."){
+            alert("Ops, algo deu errado, tente nocamente")
+        }else{
+            window.location.reload()
+        }
     })
 }

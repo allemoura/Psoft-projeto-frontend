@@ -1,8 +1,8 @@
 
-const nome = document.getElementById('txtNome').value;
-const sobrenome = document.getElementById('txtSobrenome').value;
-const email = document.getElementById('txtEmail').value;
-const senha = document.getElementById('txtSenha').value;
+const nome = document.getElementById('txtNome');
+const sobrenome = document.getElementById('txtSobrenome');
+const email = document.getElementById('txtEmail');
+const senha = document.getElementById('txtSenha');
 
 function cadastraUsuario(){
   return fetch('https://pjsw.herokuapp.com/api/v1/user/', {
@@ -11,21 +11,26 @@ function cadastraUsuario(){
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({name: nome, lastName: sobrenome, email:email,password:senha})
+    body: JSON.stringify({name: nome.value, lastName: sobrenome.value, email:email.value,password:senha.value})
   });
 }
 
 function cadastra(){
-  cadastraUsuario().then(result => {
-  return result.json()
-}).then(data => {
-  console.log(data)
-  if(data.message == 'Voce nao tem permissao. Por favor, faca login.'){
-    alert('E-mail já esta cadastrado!!!')
-  }else if(data.message == 'Ops, algo deu errado.'){
-    alert('Ops, algo deu errado.')
-
+  if(email.value != '' && senha.value != ''){
+    cadastraUsuario().then(result => {
+      return result.json()
+    }).then(data => {
+      console.log(data)
+      if(data.message == 'Voce nao tem permissao. Por favor, faca login.'){
+        alert('E-mail já esta cadastrado!!!')
+      }else if(data.message == 'Ops, algo deu errado.'){
+        alert('Ops, algo deu errado.')
+    
+      }else{
+        window.open('login.html', '_self')
+      }})
   }else{
-    window.open('login.html', '_self')
+    alert('algo esta errado, verifique e tente novamente..')
   }
-})}
+  
+}

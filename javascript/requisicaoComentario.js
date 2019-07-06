@@ -1,23 +1,26 @@
 const comentarios = [];
-const idDisciplina = localStorage.getItem(idDisciplina);
 
-async function getComentario(){
-  let dis = getDisciplina();  
-  let response = await fetch('https://pjsw.herokuapp.com/api/v1/comentarios/',{
+
+async function getComentario(){  
+  var idDisciplina = localStorage.getItem('idDisciplina');
+  var token = localStorage.getItem('token');
+  console.log('aqui')
+  let response = await fetch('https://pjsw.herokuapp.com/api/v1/comentarios/' + idDisciplina +'-all',{
     method: 'GET',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-    },body: JSON.stringify({id:idDisciplina})
-  })
-  let data = await response.json()
+      'Authorization':token
+    }
+  });
+  let data = await response.json();
   let tmp = await carregaComentario(data);
+  console.log(tmp)
   comentarios.push(...tmp);
   console.log(comentarios)
 }
 
 function carregaComentario(data){
-  var lista = document.getElementById('listaComentarios');
   var comen = [];
   comen = comen.concat(data.map(r => geraArray(r)));
   return comen;
@@ -26,9 +29,8 @@ function carregaComentario(data){
 const geraArray = (obj =>{
   var arra = [];
   arra.push(obj.id);
-  arra.push(obj.usuario);
-  arra.push(obj.hora);
-  arra.push(obj.comentario);
+  arra.push(obj.username);
+  arra.push(obj.content);
   return arra;
 })
 

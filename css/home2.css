@@ -31,9 +31,17 @@ main{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     text-align: initial;
-    background-color:#5ce1e6;
+    background-color:#ffde59;
     list-style: decimal;
     border: 1px solid #ff66c4;
     margin: 6px;
+    margin-top:5px;
+    width:  307px;
     border-radius: 6px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width:500px;
+    height:200px;
+    margin-left:25%;
+    margin-right:25%;
 }

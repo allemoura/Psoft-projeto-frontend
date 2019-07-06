@@ -1,9 +1,6 @@
 #pesquisa{
-    display: grid;
-    grid-template-areas: "pesquisa bnt"
-                         "historico";
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 2fr 1fr;
+    display:flex;
+    flex-flow:wrap;
     width: 400px;
     height: 40px;
     margin: 30px auto;
@@ -30,5 +27,9 @@
     border: solid 2px aquamarine;
 }
 #historico{
-    display: inline;
+    width:258px;
+    height:20px;
+    display:inline;
+    
+    
 }

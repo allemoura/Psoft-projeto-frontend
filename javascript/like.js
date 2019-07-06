@@ -3,15 +3,14 @@ function like(){
     var token = localStorage.getItem('token');
     
     
-    fetch('https://pjsw.herokuapp.com/api/v1/disciplina/' + disc, {
-        method: 'POST',
+    fetch('https://pjsw.herokuapp.com/api/v1/disciplinas/' + disc, {
+        method: 'PUT',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           "Authorization":token
         }
       }).then(resul =>{return resul.json()}).then(data =>{
-          console.log(data)
           acaoLike(data)
       })
 }
@@ -23,14 +22,12 @@ function acaoLike(msg){
         alert('Você não esta cadastrado, cadastre-se para poder curtir!!')
     }else{
         let like = document.getElementById('textoCurti');
-        let qtdLike = document.getElementById('qtdLike')
-        let tmp = msg.map(r => `${r.qtdLikes}`)
-        if(like.textContent == 'curtir'){
+        if(msg.deuLike){
             like.textContent = 'curtiu'
         }else{
             like.textContent = 'curtir';
         }
-        qtdLike.textContent = tmp;
+        qtdLike.textContent = msg.qtdLikes;
     }
 
 }

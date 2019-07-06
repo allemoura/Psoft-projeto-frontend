@@ -7,13 +7,13 @@
         <link rel="stylesheet" href="./css/index.css">
         <link rel="stylesheet" href="./css/footer.css">
         <link rel="stylesheet" href="./css/util.css">
-        <link rel="stylesheet" href="./css/busca.css">
+        <link rel="stylesheet" href="./css/busca_v1.css">
     </head>
     <body>
         <header>
             <h1> Bem vindo ao UCDB:classificações e reviews de cursos da UFCG</h1>
-            <form id="pesquisa">
-                <input type="text" id="texto" placeholder="Buscar..."/>
+            <form id="pesquisa" style='margin-left:36%;margin-right:36%'>
+               <input type="text" id="texto" placeholder="Buscar..."/>
                 <img class="bnt" onclick=getDisciplinas() src="https://image.flaticon.com/icons/png/512/16/16492.png" alt="Buscar..."/>
                 <select id="historico" onchange=changeFunc(value)></select>
             </form>
