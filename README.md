@@ -11,3 +11,5 @@ Para estilização das páginas foi usado apenas css;
 Para ação, organização, execução de requisições necessarias para o funcionamento do frontend foi utilizado apenas javascript;
 Apenas components proprios foram utilizados, construido por meio do css, html e javascript;
 Nenhum tipo de biblioteca ou frameworks foi utilizado para está aplicação.    
+
+### Link para acessar o frontend:http://kirk.lcc.ufcg.edu.br/~alessandramrbm/projeto-psoft/
