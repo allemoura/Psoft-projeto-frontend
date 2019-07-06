@@ -34,3 +34,5 @@ function cadastra(){
   }
   
 }
+function limpaLocalStorage(){localStorage.clear()};
+limpaLocalStorage();

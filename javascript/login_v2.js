@@ -29,4 +29,5 @@ function login(){
         }
     })
 }
-
+function limpaLocalStorage(){localStorage.clear()}
+limpaLocalStorage();
