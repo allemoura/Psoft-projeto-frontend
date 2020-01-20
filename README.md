@@ -12,4 +12,4 @@ Para ação, organização, execução de requisições necessarias para o funci
 Apenas components proprios foram utilizados, construido por meio do css, html e javascript;
 Nenhum tipo de biblioteca ou frameworks foi utilizado para está aplicação.    
 
-### Link para acessar o frontend:http://kirk.lcc.ufcg.edu.br/~alessandramrbm/projeto-psoft/
+### Link para acessar o frontend:https://allemoura.github.io/Psoft-projeto-frontend/
